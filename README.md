@@ -2,6 +2,8 @@
 
 A small, quiet page for a birthday video.
 
+Live at <https://gmh06.github.io/a-birthday-film/>.
+
 ## Files
 
 - `index.html` — page structure and copy
