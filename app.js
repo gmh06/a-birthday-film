@@ -411,6 +411,7 @@
 
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       event.preventDefault();
+      if (sourceIndex < 0 || video.readyState < 1) return;
       const step = event.key === "ArrowLeft" ? -5 : 5;
       video.currentTime = Math.min(
         getDuration(),
