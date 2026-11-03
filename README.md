@@ -21,6 +21,8 @@ Colors and type live at the top of `styles.css` under `:root`.
 ## Notes
 
 - The page uses no external fonts, scripts, or trackers.
-- The video is loaded only when the visitor presses play (`preload="metadata"`).
+- The video is loaded only when the visitor presses play (`preload="none"`).
+- For faster access from mainland China, the film is tried from a GitHub mirror first,
+  then falls back to the copy in this repository.
 - The URL is public to anyone who has it. `noindex` and `robots.txt` only ask search
   engines not to list it; they are not access control.
