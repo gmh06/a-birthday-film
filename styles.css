@@ -338,6 +338,30 @@ button {
   fill: var(--cream);
 }
 
+.cover.is-loading {
+  cursor: progress;
+}
+
+.cover.is-loading .cover-play svg {
+  opacity: 0;
+}
+
+.cover.is-loading .cover-play::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(245, 238, 226, 0.42);
+  border-top-color: var(--cream);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .cover-hint {
   position: relative;
   z-index: 2;
