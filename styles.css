@@ -220,6 +220,23 @@ button {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.13);
 }
 
+@supports not (aspect-ratio: 16 / 9) {
+  .frame::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  .player {
+    position: absolute;
+    inset: 0;
+  }
+
+  .frame:fullscreen::before {
+    display: none;
+  }
+}
+
 .player {
   display: block;
   width: 100%;
@@ -271,13 +288,13 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.92) contrast(1.02) brightness(0.94);
+  filter: saturate(1.03) contrast(1.02) brightness(1.02);
   transform: scale(1.015);
   transition: transform 1.8s var(--ease), filter 0.8s ease;
 }
 
 .cover:hover .cover-image {
-  filter: saturate(0.98) contrast(1.02) brightness(0.97);
+  filter: saturate(1.06) contrast(1.02) brightness(1.04);
   transform: scale(1.045);
 }
 
@@ -286,8 +303,8 @@ button {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse at 50% 44%, rgba(10, 9, 8, 0) 0%, rgba(10, 9, 8, 0.08) 48%, rgba(10, 9, 8, 0.42) 100%),
-    linear-gradient(180deg, rgba(10, 9, 8, 0.28) 0%, rgba(10, 9, 8, 0.02) 32%, rgba(10, 9, 8, 0.08) 60%, rgba(10, 9, 8, 0.72) 100%);
+    radial-gradient(ellipse at 50% 44%, rgba(10, 9, 8, 0) 0%, rgba(10, 9, 8, 0.06) 48%, rgba(10, 9, 8, 0.34) 100%),
+    linear-gradient(180deg, rgba(10, 9, 8, 0.18) 0%, rgba(10, 9, 8, 0.01) 32%, rgba(10, 9, 8, 0.06) 60%, rgba(10, 9, 8, 0.7) 100%);
 }
 
 .cover-play {
